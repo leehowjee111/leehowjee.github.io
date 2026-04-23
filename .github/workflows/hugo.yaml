@@ -3,6 +3,7 @@ name: Deploy Hugo site to Pages
 on:
   push:
     branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -18,18 +19,17 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
-          extended: true
-      - name: Install Hugo CLI
-        run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.124.1/hugo_extended_0.124.1_linux-amd64.tar.gz
-          tar -xzf hugo_extended_0.124.1_linux-amd64.tar.gz
-          sudo mv hugo /usr/local/bin/
+          hugo-version: 'latest' # 自动获取最新版
+          extended: true         # 必须为 true，否则无法生成 CSS 文件
+
       - name: Build with Hugo
-        run: hugo --minify
+        run: |
+          hugo --minify --baseURL "https://leehowjee111.github.io/"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
