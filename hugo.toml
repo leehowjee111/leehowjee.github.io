@@ -2,6 +2,24 @@ baseURL = 'https://leehowjee111.github.io/'
 languageCode = 'zh-cn'
 title = 'Lee 的博客' # 博客标题
 theme = 'PaperMod'
+#菜单要独立出来
+[[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+
+[[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 20
+
+[[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 30    
 
 [params]
     env = 'production'
@@ -31,23 +49,6 @@ theme = 'PaperMod'
     [[params.socialIcons]]
         name = "b"
         url = ""
-    [[menu.main]]
-        identifier = "posts"
-        name = "文章"
-        url = "/posts/"
-        weight = 10
-
-    [[menu.main]]
-        identifier = "archives"
-        name = "归档"
-        url = "/archives/"
-        weight = 20
-
-    [[menu.main]]
-        identifier = "search"
-        name = "搜索"
-        url = "/search/"
-        weight = 30    
     # 开启评论功能
     [params.comment]
         enable = true
