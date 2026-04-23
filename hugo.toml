@@ -4,23 +4,58 @@ title = 'Lee 的博客' # 博客标题
 theme = 'PaperMod'
 
 [params]
-  env = 'production'
-  title = 'LeeHowJee'
-  description = '一个小白的学习记录' # 博客描述
-  keywords = ['Blog','Tech','Code'] # 博客关键词
-  author = 'LeeHowJee' # 作者
+    env = 'production'
+    title = 'LeeHowJee'
+    description = '一个小白的学习记录' # 博客描述
+    keywords = ['Blog','Tech','Code'] # 博客关键词
+    author = 'LeeHowJee' # 作者
 
-  #开启搜索功能
-  [params.fuseOpts]
-    isCaseSensitive = false # 是否区分大小写
-    shouldSort = true # 是否排序
-    location = 0 # 开始搜索的位置
-    distance = 100 # 匹配字符之间的最大距离
-    threshold = 0.4 # 匹配阈值
-    minMatchCharLength = 2 # 最小匹配字符长度
-    keys = ['title','content'] # 搜索的键
+#开启搜索功能
+    [params.fuseOpts]
+        isCaseSensitive = false # 是否区分大小写
+        shouldSort = true # 是否排序
+        location = 0 # 开始搜索的位置
+        distance = 100 # 匹配字符之间的最大距离
+        threshold = 0.4 # 匹配阈值
+        minMatchCharLength = 2 # 最小匹配字符长度
+        keys = ['title','content'] # 搜索的键
 
-  # 开启评论功能
-  [params.comment]
-    enable = true
-    type = 'utterances' # 评论类型
+    #设置首页个人信息
+    [params.homeInfoParams]
+        Title = "Hi there 👋"
+        Content = "欢迎来到我的数字花园。我在这里记录技术心得和生活感悟。"
+
+    [[params.socialIcons]]
+        name = "github"
+        url = "https://github.com/leehowjee111"
+    [[params.socialIcons]]
+        name = "b"
+        url = ""
+    [[menu.main]]
+        identifier = "posts"
+        name = "文章"
+        url = "/posts/"
+        weight = 10
+
+    [[menu.main]]
+        identifier = "archives"
+        name = "归档"
+        url = "/archives/"
+        weight = 20
+
+    [[menu.main]]
+        identifier = "search"
+        name = "搜索"
+        url = "/search/"
+        weight = 30    
+    # 开启评论功能
+    [params.comment]
+        enable = true
+        type = 'utterances' # 评论类型
+    ShowReadingTime = true       # 显示阅读时间
+    ShowShareButtons = true      # 显示分享按钮
+    ShowCodeCopyButtons = true   # 代码块右上角显示复制按钮
+    defaultTheme = "auto"        # 自动切换深色/浅色模式
+    disableSpecial1stPost = false 
+    displayFullContent = false
+    ShowPostNavLinks = true
