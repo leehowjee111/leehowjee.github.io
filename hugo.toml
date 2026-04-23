@@ -1,7 +1,26 @@
 baseURL = 'https://leehowjee111.github.io/'
 languageCode = 'zh-cn'
-title = 'Lee 的博客'
+title = 'Lee 的博客' # 博客标题
 theme = 'PaperMod'
 
 [params]
   env = 'production'
+  title = 'LeeHowJee'
+  description = '一个小白的学习记录' # 博客描述
+  keywords = ['Blog','Tech','Code'] # 博客关键词
+  author = 'LeeHowJee' # 作者
+
+  #开启搜索功能
+  [params.fuseOpts]
+    isCaseSensitive = false # 是否区分大小写
+    shouldSort = true # 是否排序
+    location = 0 # 开始搜索的位置
+    distance = 100 # 匹配字符之间的最大距离
+    threshold = 0.4 # 匹配阈值
+    minMatchCharLength = 2 # 最小匹配字符长度
+    keys = ['title','content'] # 搜索的键
+
+  # 开启评论功能
+  [params.comment]
+    enable = true
+    type = 'utterances' # 评论类型
