@@ -62,3 +62,6 @@ canonifyURLs = false
     disableSpecial1stPost = false 
     displayFullContent = false
     ShowPostNavLinks = true
+
+[permalinks]
+  posts = "/posts/:filename/"
