@@ -2,7 +2,7 @@
 date = '2026-04-23T18:59:50+08:00'
 draft = false
 title = 'c++17异步服务器'
-slug: cpp17-async-server  # 关键：指定URL后缀，避免用中文/特殊字符
+slug = "cpp17-async-server"  # 关键：指定URL后缀，避免用中文/特殊字符
 +++
 # 总体复盘阶段
 ### 一 项目的运行流程
