@@ -2,8 +2,8 @@ baseURL = 'https://leehowjee.github.io/'
 languageCode = 'zh-cn'
 title = 'Lee 的博客' # 博客标题
 theme = 'PaperMod'
-relativeURLs = false
-canonifyURLs = true
+relativeURLs = true
+canonifyURLs = false
 #菜单要独立出来
 [[menu.main]]
     identifier = "posts"
