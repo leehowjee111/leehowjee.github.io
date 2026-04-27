@@ -64,4 +64,7 @@ canonifyURLs = false
     ShowPostNavLinks = true
 
 [permalinks]
-  posts = "/posts/:filename/"
+  posts = "/posts/:year/:month/:contentbasename/"
+
+[markup.goldmark.renderer]
+  unsafe = true
