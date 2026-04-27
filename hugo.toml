@@ -2,8 +2,8 @@ baseURL = 'https://leehowjee.github.io/'
 languageCode = 'zh-cn'
 title = 'Lee 的博客' # 博客标题
 theme = 'PaperMod'
-relativeURLs = true
-canonifyURLs = false
+relativeURLs = false
+canonifyURLs = true
 #菜单要独立出来
 [[menu.main]]
     identifier = "posts"
@@ -64,4 +64,7 @@ canonifyURLs = false
     ShowPostNavLinks = true
 
 [markup.goldmark.renderer]
-  unsafe = true   
+  unsafe = true
+
+[permalinks]
+  posts = "/posts/:slug/"
